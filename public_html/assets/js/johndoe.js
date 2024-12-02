@@ -147,4 +147,13 @@ function initMap() {
         }
       ]
     });
+
+    document.getElementById('downloadCV').addEventListener('click', function() {
+      const link = document.createElement('a');
+      link.href = 'assets/imgs/CV%20Reine%20Enzo.pdf'; // Corrected path
+      link.download = 'CV Reine Enzo.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+  });
 }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="assets/css/johndoe.css">
+</head> 
+<body>
+   
+    <!-- Formulaire de Recherche -->
+    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/hero.jpg">
+        <form class="d-flex tm-search-form" id="searchForm" action="#" method="GET">
+            <input 
+                class="form-control tm-search-input" 
+                type="search" 
+                placeholder="Rechercher" 
+                aria-label="Rechercher" 
+                id="searchInput" 
+                name="query" 
+                autocomplete="off"
+            >
+            <button class="btn btn-outline-success tm-search-btn" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+
+    <!-- Galerie de Photos -->
+    <div class="container-fluid tm-container-content tm-mt-60">
+        <div class="row tm-mb-90 tm-gallery">
+            <!-- Élément de Galerie 1 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 tm-gallery-item">
+                <figure class="effect-ming tm-video-item">
+                    <img src="assets/imgs/Liszt_hungarian_rhapsody.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Liszt | Hungarian Rhapsody 6</h2>
+                        <a href="https://youtube.com/shorts/20v7zvtgz6Q?si=63fwwoLIRGsw59pN">Voir la vidéo</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">28 Octobre 2024</span>
+                </div>
+            </div>
+            <!-- Élément de Galerie 2 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 tm-gallery-item">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/experience.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Experience | Ludovico Einaudi (violon)</h2>
+                        <a href="https://youtube.com/shorts/gRxYyQ13n_I">Voir la vidéo</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">22 Juillet 2024</span>
+                </div>
+            </div>
+
+            
+            <!-- Ajoutez d'autres éléments de galerie ici -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
+                    &copy; 2020 Mon Portfolio. Tous droits réservés.
+                </div>
+                <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
+                    Conçu par <a href="https://templatemo.com" class="text-muted" rel="sponsored" target="_blank">TemplateMo</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins.js -->
+    <script src="js/plugins.js"></script>
+    <!-- Script de Recherche -->
+    <script>
+        $(document).ready(function(){
+            // Fonction de Recherche Dynamique
+            $('#searchInput').on('keyup', function(){
+                var query = $(this).val().toLowerCase();
+
+                $('.tm-gallery-item').each(function(){
+                    var title = $(this).find('h2').text().toLowerCase();
+
+                    if(title.includes(query)){
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+
+            // Optionnel : Gestion de la soumission du formulaire
+            $('#searchForm').on('submit', function(e){
+                e.preventDefault();
+                // Actions supplémentaires si nécessaire
+            });
+        });
+    </script>
+</body>
+</html>
