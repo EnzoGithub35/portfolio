@@ -11431,7 +11431,7 @@ pre .code {
   -weblit-transition: .5s !important;
   z-index: 2;
   box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13);
-  width: 170px;
+  width: 10%;
   border-radius: 50%;
 }
 
@@ -11681,4 +11681,8 @@ pre .code {
   background: #F85C70;
   display: block;
   margin-top: 10px;
+}
+
+.social-icons .social-item .social-link i {
+  font-size: 1.7rem; /* Ajustez cette valeur selon vos besoins */
 }
