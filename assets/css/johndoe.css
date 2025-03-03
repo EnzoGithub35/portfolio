@@ -11686,3 +11686,30 @@ pre .code {
 .social-icons .social-item .social-link i {
   font-size: 1.7rem; /* Ajustez cette valeur selon vos besoins */
 }
+
+.display-2 {
+  color: black; /* Couleur rouge pour matcher avec votre thème */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.portfolio-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-item {
+  transition: transform 0.3s ease;
+}
+
+.portfolio-link:hover .portfolio-item {
+  transform: translateY(-5px);
+}
