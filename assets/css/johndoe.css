@@ -11734,6 +11734,22 @@ pre .code {
   animation: pulse 2s infinite;
 }
 
+.offline-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  animation: pulse 2s infinite;
+}
+
 @keyframes pulse {
   0% {
       transform: scale(1);
